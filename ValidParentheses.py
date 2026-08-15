@@ -1,0 +1,18 @@
+class Solution(object):
+    def isValid(self, s):
+        stack=[]
+        pairs={
+            ')':'(',
+            ']':'[',
+            '}':'{'
+        }
+        for ch in s:
+            if ch in '([{':
+                stack.append(ch)
+            else:
+                if not stack or stack[-1]!=pairs[ch]:
+                    return False
+                stack.pop()
+s1=Solution()
+v='(}'
+print(s1.isValid(v))
