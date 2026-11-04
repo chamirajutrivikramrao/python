@@ -1,0 +1,11 @@
+a=[10,20,["vicky","pinky"],30]
+print(a)
+b=a.copy()
+print(a)
+print(b)
+a[2][1]="nicky"
+print(a)
+print(b)
+a[1]=200
+print(a)
+print(b)
